@@ -1,0 +1,7 @@
+//---------------------Kusto Query for plugx IOC  ------------------
+//List all devices that accessed specific URLs or IPs associated with the malware
+let iocs_ip = dynamic([]);
+let ioc_domains = dynamic(["cccommercialcleaning.com.au", "miandfish.store", "urleddrug.at"]);
+DeviceNetworkEvents
+| where RemoteUrl has_any (ioc_domains) or RemoteIP has_any (iocs_ip)
+| project-reorder Timestamp, DeviceName, ActionType, RemoteIP, RemoteUrl, InitiatingProcessFileName, InitiatingProcessCommandLine
