@@ -1,4 +1,4 @@
-Dummy script that generates KQL queries for threat hunting.
+Script that generates KQL queries for threat hunting.
 
 This script utilizes **malwoverview** to generate a **KQL query** to search for **Network IoC** within your environment.
 
