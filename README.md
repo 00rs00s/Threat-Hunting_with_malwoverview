@@ -10,8 +10,5 @@ This implementation fetches IoC from MALWARE BAZAAR, THREATFOX and URLHaus. Feel
 
 **Note:** The "malwoverview.py" script is executed directly here, assuming it is in your system's PATH
 and marked as executable. If it is not, you may need to:
-1. Specify the full path to the script:
-subprocess.check_output(["/path/to/malwoverview.py", "-b", "9", "-B", malname]).decode("utf-8")
-2. Explicitly invoke it with Python if the script is not executable or lacks a shebang:
-subprocess.check_output(["python3", "malwoverview.py", "-b", "9", "-B", malname]).decode("utf-8")
-Ensure "malwoverview.py" is properly installed or available in your environment before running.
+1. Specify the full path to the script
+2. Explicitly invoke it with Python if the script is not executable or lacks a shebang.
